@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .App {
+    max-width: 320px;
+    max-width: 1920px;
+  }
+
+  .bookList {
+    margin: 0 auto;
+    border: 2px solid teal;
+  }
+
+  .book {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    padding: 15px;
+    margin: 5px;
+    border: 2px solid teal;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    background: lightgray;
+  }
+
+  .book > img {
+    width: 70vw;
+    height: 40vm;
+  }
