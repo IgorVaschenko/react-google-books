@@ -1,12 +1,12 @@
 import React from 'react';
 import BookItem from './BookItem';
 
-const BookList = ({books}) => {
+const BookList = ({ books }) => {
     return (
         <div className='bookList'>
             {books.map((book) =>
                 <BookItem
-                    key={book.id}
+                    key={book.etag}
                     book={book}
                 />
             )}
