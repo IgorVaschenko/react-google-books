@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MySelect from './UI/select/MySelect'
 
-const BookSorts = ({setCategory, setSearchRelevant}) => {
+const BookSorts = ({ setSearchBook, setCategory, setSearchRelevant }) => {
 
     const [selectedSortByCategories, setSelectedSortByCategories] = useState('')
     const [selectedSortByRelevant, setSelectedSortByRelevant] = useState('')
@@ -9,6 +9,7 @@ const BookSorts = ({setCategory, setSearchRelevant}) => {
     const sortBooksByCategory = (sort) => {
         setSelectedSortByCategories(sort)
         setCategory(sort)
+        setSearchBook('')
     }
 
     const sortBooksByRelevant = (sort) => {
@@ -19,20 +20,22 @@ const BookSorts = ({setCategory, setSearchRelevant}) => {
     return (
         <div className='book__sort'>
 
+            <h3>Categories </h3>
             <MySelect
                 value={selectedSortByCategories}
                 onChange={sort => sortBooksByCategory(sort)}
                 options={[
-                    { value: 'subject:art+', name: 'art' },
-                    { value: 'subject:biography+', name: 'biography' },
-                    { value: 'subject:computers+', name: 'computers' },
-                    { value: 'subject:history+', name: 'history' },
-                    { value: 'subject:medical+', name: 'medical' },
-                    { value: 'subject:poetry+', name: 'poetry' },
+                    { value: '?q=subject:art', name: 'ART' },
+                    { value: '?q=subject:biography', name: 'BIOGRAPHY' },
+                    { value: '?q=subject:computers', name: 'COMPUTERS' },
+                    { value: '?q=subject:history', name: 'HISTORY' },
+                    { value: '?q=subject:medical', name: 'MEDICAL' },
+                    { value: '?q=subject:poetry', name: 'POETRY' },
                 ]}
                 defaultValue={{ value: '', name: 'all' }}
             />
 
+            <h3>Sorting by </h3>
             <MySelect
                 value={selectedSortByRelevant}
                 onChange={sort => sortBooksByRelevant(sort)}
@@ -41,7 +44,6 @@ const BookSorts = ({setCategory, setSearchRelevant}) => {
                 ]}
                 defaultValue={{ value: 'relevance', name: 'relevance' }}
             />
-
         </div>
     )
 }

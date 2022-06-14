@@ -1,0 +1,16 @@
+.myButton{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-image: url('../../../img/searchBtn.jpg');
+    background-size: cover;
+    background-color: white;
+    border: none;
+}
+
+.myButtonLoadMore {
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}

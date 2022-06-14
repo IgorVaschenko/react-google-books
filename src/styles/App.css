@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h3 {
+  margin: 10px;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -11,37 +15,9 @@
 }
 
 .App {
+  width: 1500px;
   max-width: 320px;
   max-width: 1920px;
+  font: 13px Arial;
 }
 
-.bookList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.book {
-  width: 300px;
-  height: 400px;
-  padding: 15px;
-  margin: 25px;
-  vertical-align: top;
-  background: lightgray;
-}
-
-.book__img {
-  width: 170px;
-  height: 230px;
-  margin: 20px auto;
-}
-
-.book__img>img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.totalItems {
-  text-align: center;
-  /* border: 1px solid teal; */
-}
